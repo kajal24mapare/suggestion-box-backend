@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "subject")
-@Data // replacement for getter setter
+@Data // Replacement for getter setter
 public class Subject implements Serializable {
 
     @Id
