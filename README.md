@@ -1,2 +1,2 @@
 # suggestion-box-backend
-Fullstack: backend for springboot application
+Fullstack: Backend for springboot application
