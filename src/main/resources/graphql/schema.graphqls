@@ -1,0 +1,21 @@
+type Mutation {
+    createNewSubject(newSubject: SubjectInput): Subject
+}
+
+type Query {
+    getAllSubjects: [Subject]
+    getSubject(subjectId: Int): Subject
+}
+
+type Subject {
+    subjectId: ID!
+    title: String
+    description: String
+    responseCount: Int
+}
+
+input SubjectInput {
+    title: String
+    description: String
+    responseCount: Int
+}
