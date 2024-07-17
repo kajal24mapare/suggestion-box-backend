@@ -1,26 +1,17 @@
 package com.backend.suggestionbox.service;
 
-import com.backend.suggestionbox.model.Subject;
-import com.backend.suggestionbox.repository.SubjectRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.backend.suggestionbox.entities.Subject;
 
 import java.util.List;
 
-@Service
-public class SubjectService {
+public interface SubjectService {
 
-    @Autowired
-    private SubjectRepository subjectRepository;
+    // create subject
+     Subject createNewSubject(Subject newSubject);
 
-    public Subject createNewSubject(Subject newSubject) {
-        Subject subject = subjectRepository.save(newSubject);
-        //Business Logic
+     // getAll subjects
+     List<Subject> getAllSubjects() ;
 
-        return subject;
-    }
-
-    public List<Subject> getAllSubjects() {
-        return subjectRepository.findAll();
-    }
+     // get single subject
+     Subject getSubject(Long subjectId);
 }
